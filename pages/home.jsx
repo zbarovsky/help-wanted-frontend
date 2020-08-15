@@ -4,10 +4,14 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom'
 import LandingCarousel from './components/LandingCarousel'
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 const Login = (props) => {
   console.log('💔')
   console.log(props)
+
+  
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
 
@@ -43,26 +47,37 @@ const Login = (props) => {
   if (props.user) return <Redirect to="/profile" user={props.user} />
 
   return (
-      <div className="row mt-4">
-        <div className="col-md-7 offset-md-3">
-          <div className="card card-body">
-            <h2 className="py-2">Login</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" required />
+      <div className="login">
+        <Container>
+          <Row>
+            <Col>
+              <div className="card">
+                <h2 className="py-2">Login</h2>
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
+                  </div>
+                  <button type="submit" className="btn btn-primary float-right">Submit</button>
+                </form>
               </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
-              </div>
-              <button type="submit" className="btn btn-primary float-right">Submit</button>
-            </form>
-          </div>
-        </div>
+            </Col>
+          </Row>
 
-        <LandingCarousel />
+          <Row>
+            <Col lg="1"></Col>
 
+            <Col lg="10">
+              <LandingCarousel />
+            </Col>
+
+            <Col lg="1"></Col>
+          </Row>
+        </Container>
       </div>
     )
 }

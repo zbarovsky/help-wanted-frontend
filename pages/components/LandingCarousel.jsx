@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-
+import Head from 'next/head'
 
 function LandingCarousel() {
     const banner = {
@@ -10,7 +10,17 @@ function LandingCarousel() {
     }
     
     return (
-        <div>  
+        <div> 
+            <Head>
+                <link
+                    rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+                    crossorigin="anonymous"
+                />
+            </Head> 
+
+
             <div className='container-fluid' >  
             <Carousel>  
                 <Carousel.Item style={{'height':"400px"}} >  
