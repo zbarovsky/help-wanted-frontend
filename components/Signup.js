@@ -7,7 +7,7 @@ export default function Signup() {
     let [email, setEmail] = useState('')
     let [password, setPassword] = useState('')
     let [password2, setPassword2] = useState('')
-    // let [redirect, setRedirect] = useState(false)
+    //let [redirect, setRedirect] = useState(false)
 
     let handleName = (e) => {
         setName(e.target.value)
@@ -39,7 +39,7 @@ export default function Signup() {
             .then(res => {
               console.log('route hit ✅')
                 // redirect user to Login
-                // setRedirect(true)
+                //setRedirect(true)
             })
             .catch(error => {
                 console.log(error + 'route hit 🤬')
