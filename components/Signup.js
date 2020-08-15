@@ -35,13 +35,14 @@ export default function Signup() {
             password: password,
           }
 
-        axios.post(`http://localhost:3000/users/register`, newUser)
+        axios.post(`http://localhost:3001/users/register`, newUser)
             .then(res => {
+              console.log('route hit ✅')
                 // redirect user to Login
                 // setRedirect(true)
             })
             .catch(error => {
-                console.log(error)
+                console.log(error + 'route hit 🤬')
             })
         }
     }
