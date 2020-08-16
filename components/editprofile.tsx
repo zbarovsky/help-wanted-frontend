@@ -1,16 +1,21 @@
-import * as React from "react";
-import { useEffect, useState, FormEvent } from 'react'
+import React, { useEffect, useState, FormEvent, FunctionComponent } from 'react'
 import axios from 'axios'
 import * as ReactDOM from "react-dom";
 
 
+type EditProfileProps = {
+    isTeacher: string,
+    bio: string,
+    instrumentsPlayed: string,
+    avatar: string
+
+}
     
-const EditProfile: React.FC = function () {
-    let hello: string = "Hello, World"
-    // let [name, setName] = useState('')
+const EditProfile: FunctionComponent <EditProfileProps> = function (props) {
+    
+    let [name, setName] = useState('')
     let [isTeacher, setIsTeacher] = useState("false")
     let [bio, setBio] = useState('')
-    let [interests, setInterests] = useState('')
     let [instrumentsPlayed, setInstrumentsPlayed] = useState('')
     let [avatar, setAvatar] = useState('')
 
@@ -21,10 +26,9 @@ const EditProfile: React.FC = function () {
         
         // Form data
         let data: object = {
-            // name,
+            name,
             isTeacher,
             bio,
-            interests,
             instrumentsPlayed,
             avatar
         }
@@ -35,15 +39,19 @@ const EditProfile: React.FC = function () {
 
     return (
         <div>
-            {hello}
+            <h1>Edit Profile</h1>
             <form onSubmit={handleSubmit}>
-                {/* <input type="text" name="name" id="name" placeholder="Name" onChange={(e: FormEvent<HTMLInputElement>) => setName(e.currentTarget.value)}/> */}
-                <p>This is a teacher profile</p>
+                <input type="text" name="name" id="name" placeholder="Name" onChange={(e: FormEvent<HTMLInputElement>) => setName(e.currentTarget.value)}/>
+                <br /><br />
+                <label >This is a teacher account</label>
                 <input type="radio" name="isTeacher" id="isTeacher" value="true" onChange={(e: FormEvent<HTMLInputElement>) => setIsTeacher(e.currentTarget.value)}/>
+                <br /><br />
                 <input type="text" name="bio" id="bio" placeholder="Bio" onChange={(e: FormEvent<HTMLInputElement>) => setBio(e.currentTarget.value)}/>
-                <input type="text" name="interests" placeholder="Interests" onChange={(e: FormEvent<HTMLInputElement>) => setInterests(e.currentTarget.value)}/>
+                <br /><br />
                 <input type="text" name="instrumentsPlayed" placeholder="What instruments do you play?" onChange={(e: FormEvent<HTMLInputElement>) => setInstrumentsPlayed(e.currentTarget.value)}/>
+                <br /><br />
                 <input type="text" name="avatar" placeholder="Upload a picture" onChange={(e: FormEvent<HTMLInputElement>) => setAvatar(e.currentTarget.value)}/>
+                <br /><br />
                 <button type="submit">Submit</button>
             </form>
         </div>
