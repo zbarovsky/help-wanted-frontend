@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EditProfile from '../components/editprofile'
 
 const Profile = (props) => {
     let userData = props.user
       ? <div>
           <h1>Profile</h1>
+            <img src={props.user.avatar} alt={props.user.name} className="mb-4" />
             <p><strong>Name:</strong> {props.user.name}</p>
             <p><strong>email:</strong> {props.user.email}</p>
             <p><strong>ID:</strong> {props.user.id}</p>
+            <EditProfile currentUser = {props.user} />
         </div>
       : <h4>Loading...</h4>
 
