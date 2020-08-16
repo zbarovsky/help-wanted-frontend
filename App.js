@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div>
-      <Navbar handleLogout={handleLogout} isAuthenticated={isAuthenticated} />
+      <Nav handleLogout={handleLogout} isAuthenticated={isAuthenticated} />
       <div className="react-router-logic">
         <Switch>
           <Route path='/signup' component={ Signup } />
