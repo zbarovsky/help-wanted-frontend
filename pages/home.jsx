@@ -3,7 +3,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom'
-import LandingCarousel from './components/LandingCarousel'
+import LandingCarousel from '../components/LandingCarousel'
 import { Container, Row, Col } from 'react-bootstrap';
 
 
