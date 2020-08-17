@@ -11,7 +11,9 @@ const Payment: FunctionComponent<Props> = ({isTeacher}) => {
         <div>
             <div>
                 <h1>Payment</h1>
-                {/* Mock form for stripe page for teachers */}
+            </div>
+            {/* Mock form for stripe page for teachers */}
+            <div>
                 <form>
                     <input type='text' name='name' placeholder='name' />
                     <input type='text' name='cardInfo' placeholder='Card Info'/>
