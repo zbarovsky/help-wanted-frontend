@@ -1,38 +1,10 @@
-// import Head from 'next/head'
-// import styles from '../styles/Home.module.css'
-// import EditProfile from '../components/editprofile'
-// import HomeRoute from './profile'
-
-// export default function Home() {
-//   return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Create Next App</title>
-//         <link rel="icon" href="/favicon.ico" />
-        
-//         <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
-        
-//         <script
-//           src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-//           crossorigin></script>
-        
-//         <script
-//           src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-//           crossorigin></script>
-          
-//       </Head>
-      {/* <HomeRoute /> */}
-
-      
-//     </div>
-//   )
-// }
 
 import React, { useState } from 'react'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 import { Redirect } from 'react-router-dom'
 import setAuthToken from '../utils/setAuthToken'
+import Head from 'next/head'
 
 
 export default function Login(props) {
@@ -84,10 +56,24 @@ export default function Login(props) {
     if (props.user) return <Redirect to="/profile" currentUser={props.user} />
     return (
         <div className="row mt-4">
+          <Head>
+            <title>Create Next App</title>
+            <link rel="icon" href="/favicon.ico" />
+            
+            <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+            
+            <script
+              src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+              crossorigin></script>
+            
+            <script
+              src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+              crossorigin></script>
+          </Head>
         <div className="col-md-7 offset-md-3">
           <div className="card card-body">
             <h2 className="py-2">Login</h2>
-            <form onSubmit={handleSubmit}>
+            <form action="/viewcards">
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" required />
