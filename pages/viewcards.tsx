@@ -33,7 +33,7 @@ const ViewCards: React.FC = function() {
 
     return(
         <div>
-            <p>Here are your teachers:</p>
+            <h2>Here are your teachers:</h2>
             {allTeachers}    
         </div>
     )

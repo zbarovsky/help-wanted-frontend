@@ -1,14 +1,15 @@
   
 import React, { useState, useEffect } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 import setAuthToken from './utils/setAuthToken'
 import Signup from './components/Signup'
-import Login from './login'
+import Login from './pages/index'
 import About from './components/About'
 import Welcome from './components/Welcome'
 import Nav from './components/Navbar'
 import Profile from './profile'
+import { useRouter } from 'next/router'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   // get user via jwt token to confirm user authenticated
@@ -63,7 +64,7 @@ function App() {
       <div className="react-router-logic">
         <Switch>
           <Route path='/signup' component={ Signup } />
-          <Route path='/login' render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} user={currentUser} /> } />
+          <Route path='/' render={ (props) => <Login {...props} setIsAuthenticated={setIsAuthenticated} nowCurrentUser={nowCurrentUser} setCurrentUser={setCurrentUser} user={currentUser} /> } />
           <Route path='/about' component={ About } />
           <PrivateRoute path='/profile' component={ Profile } currentUser={currentUser} />
           <Route path='/' component={ Welcome } />
