@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EditProfile from '../components/editprofile'
+import EditProfile from './editprofile'
 
 const Profile = (props) => {
     let userData = props.user

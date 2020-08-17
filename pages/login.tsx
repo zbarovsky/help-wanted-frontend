@@ -51,8 +51,7 @@ export default function Login(props) {
             .catch(err => console.log(err))
     }
 
-    if (props.user) return <Redirect to="/profile" user={props.user} />
-   
+    if (props.user) return <Redirect to="/profile" currentUser={props.user} />
     return (
         <div className="row mt-4">
         <div className="col-md-7 offset-md-3">
