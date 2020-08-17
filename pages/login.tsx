@@ -23,31 +23,31 @@ export default function Login(props) {
     
     let handleSubmit = (e) => {
         e.preventDefault();
-
         // capture userData
         const userData = {
-            email: email,
-            password: password,
+          email: email,
+          password: password,
         }
-
+        
         // make a post request to our API to see check user Authentication
         axios.post(`http://localhost:3001/users/login`, userData)
-            .then(res => {
-                // take res data and set to token
-                 const { token } = res.data
-
-                // save token to localStorage
-                localStorage.setItem('jwtToken', token)
-
-                // set token for Auth Header
-                setAuthToken(token)
-
-                // decode jwt token
-                const decoded = jwt_decode(token)
-
-                // set current user 
-                props.nowCurrentUser(decoded)
-            })
+        .then(res => {
+          // take res data and set to token
+          const { token } = res.data
+          
+          // save token to localStorage
+          localStorage.setItem('jwtToken', token)
+          
+          // set token for Auth Header
+          setAuthToken(token)
+          
+          // decode jwt token
+          const decoded = jwt_decode(token)
+          
+          // set current user 
+          props.nowCurrentUser(decoded)
+          // console.log("props.nowCurrentUser in login.tsx", props.nowCurrentUser(decoded))
+        })
             .catch(err => console.log(err))
     }
 
