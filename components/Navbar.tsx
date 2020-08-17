@@ -14,6 +14,7 @@ const Nav: FunctionComponent<NavProps> = ({isAuthenticated}) => {
     return (
         <div>
             <ul>
+                {console.log("isAuthenticated", isAuthenticated)}
                 <li>
                     <a>Profile</a>
                 </li>

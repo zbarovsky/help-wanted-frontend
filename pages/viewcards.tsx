@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react'
-import TeacherCard from './teachercard'
+import TeacherCard from '../components/teachercard'
 import axios from 'axios'
 
 
@@ -37,8 +37,6 @@ const ViewCards: React.FC = function() {
             {allTeachers}    
         </div>
     )
-
 }
-
 
 export default ViewCards
