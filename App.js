@@ -39,10 +39,10 @@ function App() {
   }, [])
 
   // setting current user
-  let nowCurrentUser = (userData) => {
-    setCurrentUser(userData)
-    setIsAuthenticated(true)
-  }
+  // let nowCurrentUser = (userData) => {
+  //   setCurrentUser(userData)
+  //   setIsAuthenticated(true)
+  // }
 
   // logging out current user
   let handleLogout = () => {
@@ -62,7 +62,7 @@ function App() {
       <div className="react-router-logic">
         <Switch>
           <Route path='/signup' component={ Signup } />
-          <Route path='/login' render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} user={currentUser} /> } />
+          <Route path='/home' render={ (props) => <Login {...props} setIsAuthenticated={setIsAuthenticated} nowCurrentUser={nowCurrentUser} setCurrentUser={setCurrentUser} user={currentUser} /> } />
           <Route path='/about' component={ About } />
           <PrivateRoute path='/profile' component={ Profile } user={currentUser} />
           <Route path='/' component={ Welcome } />

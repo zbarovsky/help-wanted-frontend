@@ -9,7 +9,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Login = (props) => {
   console.log('💔')
-  console.log(props)
+  console.log("props", props)
 
   
   let [email, setEmail] = useState('')
@@ -29,6 +29,11 @@ const Login = (props) => {
       email: email,
       password: password
     }
+    let nowCurrentUser = (userData) => {
+      props.setCurrentUser(userData)
+      props.setIsAuthenticated(true)
+    }
+    
     axios.post('http://localhost:3001/users/login', userData)
       .then(res => {
         const { token } = res.data;
@@ -39,7 +44,8 @@ const Login = (props) => {
         // Decode token to get user data
         const decoded = jwt_decode(token);
         // Set current user
-        props.nowCurrentUser(decoded);
+        // props.nowCurrentUser(decoded);
+        nowCurrentUser(decoded);
       })
       .catch(err => console.log(err));
   }
