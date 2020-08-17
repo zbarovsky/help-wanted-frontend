@@ -7,7 +7,7 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import About from './components/About'
 import Welcome from './components/Welcome'
-import Navbar from './components/Navbar'
+import Nav from './components/Navbar'
 import Profile from './components/Profile'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
