@@ -1,14 +1,15 @@
   
 import React, { useState, useEffect } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 import setAuthToken from './utils/setAuthToken'
 import Signup from './components/Signup'
-import Login from './components/Login'
+import Login from './pages/index'
 import About from './components/About'
 import Welcome from './components/Welcome'
 import Nav from './components/Navbar'
-import Profile from './components/Profile'
+import Profile from './profile'
+import { useRouter } from 'next/router'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   // get user via jwt token to confirm user authenticated
@@ -39,10 +40,10 @@ function App() {
   }, [])
 
   // setting current user
-  // let nowCurrentUser = (userData) => {
-  //   setCurrentUser(userData)
-  //   setIsAuthenticated(true)
-  // }
+  let nowCurrentUser = (userData) => {
+    setCurrentUser(userData)
+    setIsAuthenticated(true)
+  }
 
   // logging out current user
   let handleLogout = () => {
@@ -59,12 +60,13 @@ function App() {
   return (
     <div>
       <Nav handleLogout={handleLogout} isAuthenticated={isAuthenticated} />
+      {/* <Profile currentUser={nowCurrentUser} /> */}
       <div className="react-router-logic">
         <Switch>
           <Route path='/signup' component={ Signup } />
-          <Route path='/home' render={ (props) => <Login {...props} setIsAuthenticated={setIsAuthenticated} nowCurrentUser={nowCurrentUser} setCurrentUser={setCurrentUser} user={currentUser} /> } />
+          <Route path='/' render={ (props) => <Login {...props} setIsAuthenticated={setIsAuthenticated} nowCurrentUser={nowCurrentUser} setCurrentUser={setCurrentUser} user={currentUser} /> } />
           <Route path='/about' component={ About } />
-          <PrivateRoute path='/profile' component={ Profile } user={currentUser} />
+          <PrivateRoute path='/profile' component={ Profile } currentUser={currentUser} />
           <Route path='/' component={ Welcome } />
         </Switch>
       </div>
