@@ -16,6 +16,7 @@ const ViewCards: React.FC = function() {
     useEffect(() => {
         console.log("😺", teachers)
     }, [teachers])
+
     useEffect(() => {
         axios.get<Teacher[]>('http://localhost:3001/users/teachers')
         .then(response => {
@@ -24,13 +25,11 @@ const ViewCards: React.FC = function() {
             });
     }, []);
 
-
     const allTeachers = teachers.map(teacher => {
         return(
             <TeacherCard key={teacher._id} teacher={teacher} />
         )
     })
-
 
     return(
         <div>
