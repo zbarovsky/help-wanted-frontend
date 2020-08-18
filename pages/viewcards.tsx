@@ -2,6 +2,7 @@ import React, { useEffect, useState, Fragment } from 'react'
 import TeacherCard from '../components/teachercard'
 import axios from 'axios'
 import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from '../components/navbar';
 
 
 interface Teacher {
@@ -35,6 +36,7 @@ const ViewCards: React.FC = function() {
     return(
         <div>
             <Container>
+                <Navbar />
                 <Row>
                     <Col lg="4"></Col>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Container, Row, Col } from 'react-bootstrap';
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
+import Navbar from '../components/navbar'
 
 
 interface User {
@@ -30,6 +31,7 @@ const Profile: React.FC = () => {
     return (
         <div>
             <Container>
+                <Navbar />
                 <Row>
                     <Col lg="4"></Col>
 
