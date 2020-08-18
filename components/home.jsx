@@ -3,9 +3,9 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom'
-import LandingCarousel from '../components/LandingCarousel'
+import LandingCarousel from './LandingCarousel'
 import { Container, Row, Col } from 'react-bootstrap';
-import Navbar from '../components/Navbar'
+import Navbar from './Navbar'
 
 
 const Login = (props) => {
@@ -76,13 +76,13 @@ const Login = (props) => {
           </Row>
 
           <Row>
-            <Col lg="1"></Col>
+            <Col lg="2"></Col>
 
-            <Col lg="10">
+            <Col lg="8">
               <LandingCarousel />
             </Col>
 
-            <Col lg="1"></Col>
+            <Col lg="2"></Col>
           </Row>
         </Container>
       </div>

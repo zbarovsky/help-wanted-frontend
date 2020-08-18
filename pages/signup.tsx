@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 
@@ -25,6 +25,7 @@ export default function Signup() {
       setPassword2(e.target.value)
     }
 
+
     let handleSubmit = (e) => {
         e.preventDefault()
         // check if both passwords entered are the same
@@ -45,6 +46,8 @@ export default function Signup() {
                 console.log(error + 'route hit 🤬')
             })
         }
+      
+      <Redirect to='/login' />
     }
 
     // if (redirect) return <Redirect to='/login' />
