@@ -38,7 +38,7 @@ export default function LandingPage(props) {
     return (
         <div className="row mt-4">
           <Head>
-            <title>Create Next App</title>
+            <title>Help Wanted</title>
             <link rel="icon" href="/favicon.ico" />
             
             <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>

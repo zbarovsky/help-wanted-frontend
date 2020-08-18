@@ -1,11 +1,14 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
+import { Nav,  } from 'react-bootstrap'
 
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
 
     return (
-        <div>
+        <div className="navDiv">
+            <div className="logoDiv">
+                <img className="navLogo" src="/logo.png" />
+            </div>
             <Nav defaultActiveKey="/home" as="ul">
                 <Nav.Item as="li">
                     <Nav.Link href="/profile">Profile</Nav.Link>

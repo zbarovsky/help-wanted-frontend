@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #278AB0;
+  background-color: #DFB160;
 }
 
 a {
@@ -14,4 +14,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* ----------- NavBar ------------ */
+
+.navDiv {
+  background: #6E3562;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 6em;
+  border-bottom: 3px solid black;
+}
+.logoDiv {
+  background: #6E3562;
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+
+.navLogo {
+  height: 4em;
+  width: auto;
+  margin: 0 auto;
+  /* text-align: center; */
+  justify-self: center;
 }
