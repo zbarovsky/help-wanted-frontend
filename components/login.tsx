@@ -76,7 +76,7 @@ export default function Login(props) {
                 <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
               </div>
               <button type="submit" className="btn btn-primary float-right">
-                <Link href="/viewcards">
+                <Link href="/profile">
                   <a >Submit</a>
                 </Link>
               </button>

@@ -8,10 +8,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link'
 
 
-export default function Login(props) {
+const Login: React.FC = () => {
   // console logs for testing
   console.log("🏎 Login Component Rendered")
-  console.log(props)
+  
 
   let [email, setEmail] = useState("")
   let [password, setPassword] = useState("")
@@ -99,3 +99,5 @@ export default function Login(props) {
       </div>
     )
 }
+
+export default Login
