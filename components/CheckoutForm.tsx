@@ -60,6 +60,37 @@ const CheckoutForm: React.FC<Props> = () => {
             )
         }
 
+        function retryInvoiceWithNewPaymentMethod({customerId, paymentMethodId, invoiceId, priceId}): any {
+            return (
+                fetch('/http://localhost:3001/stripe/retry-invoice', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify ({
+                        customerId: customerId,
+                        paymentMethodId: paymentMethodId,
+                        invoiceId: invoiceId,
+                    }) 
+                }).then((response): any => {
+                    return response.json()
+                }).then((result: any) => {
+                    if (result.error) {
+                        console.log(result.error)
+                    } else {
+                        return ({
+                            invoice: result,
+                            paymentMethodId: paymentMethodId,
+                            priceId: priceId,
+                            isRetry: true
+                        })
+                    }
+                }).catch((error: any) => {
+                    console.log(error)
+                })
+            )
+        }
+
 
     return (
         <form onSubmit={handleSubmit}>
