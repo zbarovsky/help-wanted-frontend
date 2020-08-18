@@ -29,7 +29,7 @@ a {
 .logoDiv {
   background: #6E3562;
   padding: 1em;
-  border-bottom: 1px solid black;
+  padding-left: 2em;
 }
 
 .navLogo {
