@@ -23,19 +23,19 @@ function LandingCarousel() {
 
             <div className='container-fluid' >  
             <Carousel>  
-                <Carousel.Item style={{'height':"400px"}} >  
-                    <img style={{'height':"400px"}}  
+                <Carousel.Item style={{'height':"500px"}} >  
+                    <img style={{'height':"500px"}}  
                     className="d-block w-100"  
-                    src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80" alt="carousel img 1"  />  
+                    src="/nickubed.jpeg" width="600" alt="carousel img 1"  />  
                     <Carousel.Caption>  
                         <div >
-                            <h3 style={banner}>Scientists claim UFO, known as Tesla, came from Earth</h3>  
+                            <h3>Learn from legendary instructors </h3>  
                         </div>
                     </Carousel.Caption>  
                 </ Carousel.Item>  
 
-                <Carousel.Item style={{'height':"400px"}}>  
-                    <img style={{'height':"400px"}}  
+                <Carousel.Item style={{'height':"500px"}}>  
+                    <img style={{'height':"500px"}}  
                         className="d-block w-100"  
                         src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="carousel img 2"   />  
                     <Carousel.Caption>  
@@ -45,8 +45,8 @@ function LandingCarousel() {
                     </Carousel.Caption>  
                 </Carousel.Item>  
 
-                <Carousel.Item style={{'height':"400px"}}>  
-                    <img style={{'height':"400px"}}  
+                <Carousel.Item style={{'height':"500px"}}>  
+                    <img style={{'height':"500px"}}  
                         className="d-block w-100"  
                         src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="carousel img 3"  />  
                     <Carousel.Caption>  
