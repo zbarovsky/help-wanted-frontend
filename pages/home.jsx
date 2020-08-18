@@ -5,7 +5,6 @@ import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom'
 import LandingCarousel from '../components/LandingCarousel'
 import { Container, Row, Col } from 'react-bootstrap';
-import Navbar from '../components/Navbar'
 
 
 const Login = (props) => {
@@ -51,7 +50,7 @@ const Login = (props) => {
       .catch(err => console.log(err));
   }
 
-  if (props.user) return <Redirect to="/profile" currentUser={props.user} />
+  if (props.user) return <Redirect to="/profile" user={props.user} />
 
   return (
       <div className="login">
