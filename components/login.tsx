@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
@@ -6,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import setAuthToken from '../utils/setAuthToken'
 import Head from 'next/head'
 import Link from 'next/link'
+
 
 
 export default function Login(props) {
@@ -66,7 +66,6 @@ export default function Login(props) {
         <div className="col-md-7 offset-md-3">
           <div className="card card-body">
             <h2 className="py-2">Login</h2>
-            
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" required />

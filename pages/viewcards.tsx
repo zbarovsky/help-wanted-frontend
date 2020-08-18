@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import TeacherCard from '../components/teachercard'
 import axios from 'axios'
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 interface Teacher {
@@ -33,8 +34,19 @@ const ViewCards: React.FC = function() {
 
     return(
         <div>
-            <h2>Here are your teachers:</h2>
-            {allTeachers}    
+            <Container>
+                <Row>
+                    <Col lg="4"></Col>
+
+                    <Col lg="6"> 
+                        <h2>Here are your teachers:</h2>
+                        {allTeachers}  
+                    </Col> 
+
+                    <Col lg="4"></Col>
+
+                </Row>
+            </Container>
         </div>
     )
 }
