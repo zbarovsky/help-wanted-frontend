@@ -31,17 +31,34 @@ const CheckoutForm: React.FC<Props> = () => {
             console.log(error)
         } else {
             console.log(paymentMethod)
-            createSubscription ({
-                customerId: customerId,
-                paymentMethod: paymentMethod, 
-                priceId: priceId
-            })
+            createSubscription ({customerId, paymentMethod, priceId})
         }
     }
 
-    // function createSubscription({customerId, paymentMethod, priceId}): any {
-
-    // }
+    function createSubscription({customerId, paymentMethod, priceId}): any {
+        return (
+            fetch ('http://localhost:3001/stripe/create-subscription', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify ({
+                    customerId: customerId,
+                    paymentMethod: paymentMethod,
+                    priceId: priceId
+                })
+                
+                }).then((response: any) => {
+                    return response.json()
+                }).then((result: any) => {
+                    if (result.error) {
+                        console.log(result.error)
+                    } return result
+                }).catch((error: any) => {
+                    console.log(error)
+                })
+            )
+        }
 
 
     return (
