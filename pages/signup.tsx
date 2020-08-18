@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
 
-export default function Signup() {
+const Signup: React.FC = () => {
     let [name, setName] = useState('')
     let [email, setEmail] = useState('')
     let [password, setPassword] = useState('')
@@ -47,7 +47,6 @@ export default function Signup() {
             })
         }
       
-      <Redirect to='/login' />
     }
 
     // if (redirect) return <Redirect to='/login' />
@@ -85,3 +84,5 @@ export default function Signup() {
       </div>
     )
 }
+
+export default Signup
