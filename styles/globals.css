@@ -24,12 +24,17 @@ a {
   display: flex;
   justify-content: space-between;
   height: 6em;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(138, 138, 138);
+  color: rgb(138, 138, 138);
 }
 .logoDiv {
   background: #6E3562;
   padding: 1em;
   padding-left: 2em;
+}
+
+.navLinks {
+  line-height: 6em;
 }
 
 .navLogo {
@@ -38,4 +43,12 @@ a {
   margin: 0 auto;
   /* text-align: center; */
   justify-self: center;
+}
+
+/* ------- About -------- */
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }

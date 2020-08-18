@@ -9,18 +9,19 @@ const Navbar: React.FC = () => {
             <div className="logoDiv">
                 <img className="navLogo" src="/logo.png" />
             </div>
-            <Nav defaultActiveKey="/home" as="ul">
-                <Nav.Item as="li">
-                    <Nav.Link href="/profile">Profile</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link href="viewcards">View Instructors</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link href="/">Logout</Nav.Link>
-                </Nav.Item>
-            </Nav>
-            
+            <div className="navLinks">
+                <Nav defaultActiveKey="/home" as="ul">
+                    <Nav.Item as="li">
+                        <Nav.Link href="/profile">Profile</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
+                        <Nav.Link href="viewcards">View Instructors</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
+                        <Nav.Link href="/">Logout</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+            </div>
         </div>
     )
 }
