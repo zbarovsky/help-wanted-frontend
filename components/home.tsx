@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from '../utils/setAuthToken';
-import { Redirect } from 'react-router-dom'
 import LandingCarousel from './landingcarousel'
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link'
@@ -41,7 +37,7 @@ const Login: React.FC = () => {
 
 
             <Col lg="4">
-              <h3>Logo</h3>
+              {/* <h3>Logo</h3> */}
             </Col>
 
             <Col lg="4"></Col>
@@ -85,7 +81,6 @@ const Login: React.FC = () => {
               </div>
             </Col>
           </Row>
-
         </Container>
         <LandingCarousel />
 

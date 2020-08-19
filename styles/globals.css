@@ -48,6 +48,7 @@ a {
 
 .navLinks {
   line-height: 6em;
+  margin-right: 1.5em;
 }
 
 .navLogo {
@@ -71,6 +72,21 @@ a {
   flex-wrap: wrap;
   margin-bottom: 2em;
 }
+
+/* --------- Login ---------- */
+.yellowNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.yellowLogo {
+  width: 15em;
+  height: auto;
+  margin: 0 auto;
+}
+
 .header {
   margin: 30px 0 30px 0;
   font-weight: bold;
@@ -80,6 +96,7 @@ a {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
+
 
 .about {
   display: flex;
@@ -95,4 +112,7 @@ a {
   margin-top: 50px;
   justify-self: center;
   height: 500px;
+
+.radio {
+  width: 15%;
 }

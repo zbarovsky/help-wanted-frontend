@@ -28,6 +28,7 @@ const LandingCarousel: React.FC = () => {
                        </div>
                     </Carousel>
                 </div>
+
         </div>
 
     )
