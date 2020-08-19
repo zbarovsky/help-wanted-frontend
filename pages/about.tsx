@@ -56,7 +56,7 @@ const About: React.FC = () => {
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                     <ListGroupItem> <h6>Nick's Contributions to the Project: </h6>
-                        Frontend, styling, logo, bringing his kid to the Zoom room to distract everyone </ListGroupItem>
+                        Frontend, styling, logo, the group dad </ListGroupItem>
                 </ListGroup>
                 {/* <Card.Body>
                     <Card.Link href="/payment">Schedule a Lesson</Card.Link>
