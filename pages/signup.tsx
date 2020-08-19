@@ -11,6 +11,12 @@ const Signup: React.FC = () => {
     let [email, setEmail] = useState('')
     let [password, setPassword] = useState('')
     let [password2, setPassword2] = useState('')
+    let [isTeacher, setIsTeacher] = useState('false')
+    let [avatar, setAvatar] = useState(null)
+    let [bio, setBio] = useState('')
+    let [instrumentsPlayed, setInstrumentsPlayed] = useState('')
+
+
     //let [redirect, setRedirect] = useState(false)
 
     let handleName = (e) => {
@@ -29,15 +35,36 @@ const Signup: React.FC = () => {
       setPassword2(e.target.value)
     }
 
+    let handleAvatar = (e) => {
+      setAvatar(e.target.value)
+    }
+
+    let handleIsTeacher = (e) => {
+      setIsTeacher(e.target.value)
+    }
+
+    let handleBio = (e) => {
+      setBio(e.target.value)
+    }
+
+    let handleInstrumentsPlayed = (e) => {
+      setInstrumentsPlayed(e.target.value)
+    }
+
 
     let handleSubmit = (e) => {
         e.preventDefault()
+        console.log("avatar", avatar)
         // check if both passwords entered are the same
         if (password === password2) {
           const newUser = {
             name: name,
             email: email,
             password: password,
+            isTeacher: isTeacher,
+            bio: bio,
+            avatar: avatar,
+            instrumentsPlayed: instrumentsPlayed
           }
 
         axios.post(`http://localhost:3001/users/register`, newUser)
@@ -79,6 +106,26 @@ const Signup: React.FC = () => {
                   <label htmlFor="password2">Confirm Password</label>
                   <input type="password" name="password2" value={password2} onChange={handlePassword2} className="form-control" />
                 </div>
+                <div className="form-group">
+                  <label htmlFor="isTeacher">This is a Teacher Profile</label>
+                  <input type="radio" name="isTeacher" value="True" onChange={handleIsTeacher} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="bio">Bio</label>
+                  <input type="text" name="bio" value={bio} onChange={handleBio} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="instrumentsPlayed">What Instruments are you Interested in?</label>
+                  <input type="text" name="instrumentsPlayed" value={instrumentsPlayed} onChange={handleInstrumentsPlayed} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="avatar">Upload a Photo</label>
+                  <input type="text" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
+                </div>
+                {/* <div className="form-group">
+                  <label htmlFor="avatar">Upload a Photo</label>
+                  <input type="file" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
+                </div> */}
                 <button onClick={handleSubmit} className="btn btn-primary float-right">
                   <Link href="/">
                     <a >Submit</a>
