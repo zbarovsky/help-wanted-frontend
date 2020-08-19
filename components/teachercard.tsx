@@ -23,7 +23,7 @@ const TeacherCard: React.FC<UserProps> = ({teacher}) => {
                     <ListGroupItem> <h6>Instruments that I am interested in: </h6>
                         {teacher.instrumentsPlayed} </ListGroupItem>
                     <ListGroupItem>  
-                        <h6>Bio:</h6>
+                        <h6>About Me:</h6>
                         {teacher.bio}
                     </ListGroupItem>
                 </ListGroup>

@@ -16,6 +16,7 @@ a {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .header {
   margin: 30px 0 30px 0;
   font-weight: bold;
@@ -25,4 +26,41 @@ a {
   text-align: center;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
+=======
+/* ----------- NavBar ------------ */
+
+.navDiv {
+  background: #6E3562;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 6em;
+  border-bottom: 3px solid rgb(138, 138, 138);
+  color: rgb(138, 138, 138);
+}
+.logoDiv {
+  background: #6E3562;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+.navLinks {
+  line-height: 6em;
+}
+
+.navLogo {
+  height: 4em;
+  width: auto;
+  margin: 0 auto;
+  /* text-align: center; */
+  justify-self: center;
+}
+
+/* ------- About -------- */
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+>>>>>>> 5a901e58916c564ab69ac17b9ba9e26e1e761469
 }
