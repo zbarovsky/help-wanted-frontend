@@ -118,14 +118,14 @@ const Signup: React.FC = () => {
                   <label htmlFor="instrumentsPlayed">What Instruments are you Interested in?</label>
                   <input type="text" name="instrumentsPlayed" value={instrumentsPlayed} onChange={handleInstrumentsPlayed} className="form-control" />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="avatar">Upload a Photo</label>
-                  <input type="text" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
-                </div>
                 {/* <div className="form-group">
                   <label htmlFor="avatar">Upload a Photo</label>
-                  <input type="file" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
+                  <input type="text" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
                 </div> */}
+                <div className="form-group">
+                  <label htmlFor="avatar">Upload a Photo</label>
+                  <input type="file" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
+                </div>
                 <button onClick={handleSubmit} className="btn btn-primary float-right">
                   <Link href="/">
                     <a >Submit</a>
@@ -134,7 +134,7 @@ const Signup: React.FC = () => {
               {/* </form> */}
             </div>
           </div>
-          <CreateCustomerForm email={email} />
+          {/* <CreateCustomerForm email={email} /> */}
         </div>
       </div>
     )
