@@ -32,34 +32,7 @@ const Login: React.FC = () => {
         password: password
       }
     }
-      
-      // make a post request to our API to see check user Authentication
-  //     axios.post(`http://localhost:3001/users/login`, userData)
-  //     .then(res => {
-  //       // take res data and set to token
-  //       const { token } = res.data
-        
-  //       // save token to localStorage
-  //       localStorage.setItem('jwtToken', token)
-        
-  //       // set token for Auth Header
-  //       setAuthToken(token)
-        
-  //       // decode jwt token
-  //       const decoded = jwt_decode(token)
-        
-  //       // set current user 
-  //       props.nowCurrentUser(decoded)
-  //       // console.log("props.nowCurrentUser in login.tsx", props.nowCurrentUser(decoded))
-  //     })
-  //         .catch(err => console.log(err))
-  // }
-
-  // if (props.user) return <Redirect to="/profile" currentUser={props.user} />
-
-
-
-  
+ 
   return (
       <div className="login">
         <Container>
@@ -75,13 +48,26 @@ const Login: React.FC = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
                   </div>
-                  <button type="submit" onClick={handleSubmit} className="btn btn-primary float-right">
-                    <Link href="viewcards">
-                      <a>
-                        Submit
-                      </a>
-                    </Link>
-                    </button>
+                  <Row>
+                    <Col sm="6">
+                      <button type="submit" onClick={handleSubmit} className="btn btn-primary float-right">
+                      <Link href="profile">
+                        <a>
+                          Login
+                        </a>
+                      </Link>
+                      </button>
+                    </Col>
+                    <Col sm="6">
+                      <button type="submit" className="btn btn-primary float-right">
+                        <Link href="signup">
+                          <a>
+                            Register
+                          </a>
+                        </Link>
+                      </button>
+                    </Col>
+                  </Row>
               </div>
             </Col>
           </Row>

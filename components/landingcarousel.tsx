@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Head from 'next/head'
 
-function LandingCarousel() {
+const LandingCarousel: React.FC = () => {
     const banner = {
         "font":"white",
         "background-color":"rgb(231, 114, 46, 0.6)",
@@ -16,7 +16,7 @@ function LandingCarousel() {
                     rel="stylesheet"
                     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
                     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-                    crossorigin="anonymous"
+                    crossOrigin ="anonymous"
                 />
             </Head> 
 

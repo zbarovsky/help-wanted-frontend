@@ -1,38 +1,32 @@
-import React, { FunctionComponent } from 'react'
-import { Link } from 'react-router-dom'
-// import { isAuthenticated }  from '../App'
-import { Navbar, NavbarBrand, Nav as Navi, NavLink } from 'reactstrap'
+import React from 'react'
+import { Nav,  } from 'react-bootstrap'
 
 
-type NavProps = {
-    isAuthenticated: boolean,
-}
-
-const Nav: FunctionComponent<NavProps> = ({isAuthenticated}) => {
-
+const Navbar: React.FC = () => {
 
     return (
-        <div>
-            <ul>
-                {console.log("isAuthenticated", isAuthenticated)}
-                <li>
-                    <a>Profile</a>
-                </li>
-                <li>
-                    <a>Instructors</a>
-                </li>
-                {
-                    !isAuthenticated ?
-                        <li>
-                            <a>Log In</a>
-                        </li>
-                    : <li>
-                        <a>Log Out</a>
-                    </li>
-                }
-            </ul>
+        <div className="navDiv">
+            <div className="logoDiv">
+                <img className="navLogo" src="/logo.png" />
+            </div>
+            <div className="navLinks">
+                <Nav defaultActiveKey="/home" as="ul">
+                    <Nav.Item as="li">
+                        <Nav.Link href="/profile">Profile</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
+                        <Nav.Link href="viewcards">View Instructors</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
+                        <Nav.Link href="about">About</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
+                        <Nav.Link href="/">Logout</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+            </div>
         </div>
     )
 }
 
-export default Nav
+export default Navbar
