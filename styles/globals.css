@@ -112,7 +112,25 @@ a {
   margin-top: 50px;
   justify-self: center;
   height: 500px;
+}
 
 .radio {
   width: 15%;
+}
+
+.homeBtns {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5em;
+}
+
+.introText {
+  margin-top: 2em;
+  /* border: 3px solid #6E3562;
+  width: 70%; */
+}
+
+.introText .hTags{
+  text-align: center;
+  padding: 10px 0 5px 0;
 }

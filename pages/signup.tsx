@@ -130,9 +130,9 @@ const Signup: React.FC = () => {
                   <label htmlFor="avatar">Upload a Photo</label>
                   <input type="file" name="avatar" value={avatar} onChange={handleAvatar} className="form-control" />
                 </div>
-                <button onClick={handleSubmit} className="btn btn-primary float-right">
-                  <Link href="/">
-                    <a >Submit</a>
+                <button onClick={handleSubmit} className="btn btn-primary float-right radio">
+                  <Link href="/login">
+                    <a className="radio">Submit</a>
                   </Link>
                 </button>
               {/* </form> */}

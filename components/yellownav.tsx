@@ -6,7 +6,9 @@ const YellowNav: React.FC = () => {
 
     return (
         <div className="yellowNav">
+            <a href="/">
                 <img className="yellowLogo" src="/yellowlogo.png" />
+            </a>    
         </div>
     )
 }

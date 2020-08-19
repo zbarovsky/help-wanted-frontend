@@ -32,13 +32,11 @@ const Login: React.FC = () => {
   return (
       <div className="login">
         <Container>
-          <Row>
+          {/* <Row>
             <Col lg="4"> </Col>
-
-
-            <Col lg="4">
+            <Col lg="4"> */}
               {/* <h3>Logo</h3> */}
-            </Col>
+            {/* </Col>
 
             <Col lg="4"></Col>
           </Row>
@@ -80,7 +78,7 @@ const Login: React.FC = () => {
                   </Row>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
         <LandingCarousel />
 

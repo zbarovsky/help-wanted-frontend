@@ -7,7 +7,9 @@ const Navbar: React.FC = () => {
     return (
         <div className="navDiv">
             <div className="logoDiv">
-                <img className="navLogo" src="/logo.png" />
+                <a href="/">
+                    <img className="navLogo" src="/logo.png" />
+                </a>
             </div>
             <div className="navLinks">
                 <Nav defaultActiveKey="/home" as="ul">
