@@ -88,3 +88,11 @@ a {
   flex-wrap: wrap;
   margin-bottom: 2em;
 }
+
+.carousel-parent {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 50px;
+  justify-self: center;
+  height: 500px;
+}
