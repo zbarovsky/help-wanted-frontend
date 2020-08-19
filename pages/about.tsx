@@ -74,7 +74,7 @@ const About: React.FC = () => {
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                     <ListGroupItem> <h6>About Josh: </h6>
-                        Josh lives in Renton, Washington.  He is looking for a nice girl that he can introduce his parents to.  Although not required, a a girl with a sense of humor is prefered in order to keep up with Josh's quick wit and joyful outlook on life.  Josh is a 
+                        Josh lives in Renton, Washington.  He is looking for a nice girl that he can introduce his parents to.  Although not required, a girl with a sense of humor is prefered in order to keep up with Josh's quick wit and joyful outlook on life.  Josh is a man of confidence; he is more than willing to show off his lean body and stunning tattoos.  Who needs to buy a fan when you can just pop your shirt off when you get too hot?  That's just the way Josh lives his life.  Josh, "the-man-that-has-everything", is just missing one thing. . . a lucky lady that is enjoys life as much as he does. 
                     </ListGroupItem>
                 </ListGroup>
                 {/* <Card.Body>
