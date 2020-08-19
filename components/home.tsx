@@ -81,16 +81,9 @@ const Login: React.FC = () => {
               </div>
             </Col>
           </Row>
-
-
-          <Row>
-            <Col lg="3" />
-            <Col lg="6">
-              <LandingCarousel />
-            </Col>
-            <Col lg="3" />
-          </Row>
         </Container>
+        <LandingCarousel />
+
       </div>
     )
 }

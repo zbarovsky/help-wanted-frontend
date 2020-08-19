@@ -7,7 +7,11 @@ import Head from 'next/head'
 
 
 interface User {
-    user: any
+    user: any,
+    avatar: string,
+    name: string,
+    bio: string,
+    instrumentsPlayed: string
 }
 
 

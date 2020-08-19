@@ -52,7 +52,7 @@ const About: React.FC = () => {
                     <Card.Body>
                         <Card.Title>Nick Hvattum</Card.Title>
                         <Card.Text>
-                            Nick was born to be a rock solid follower.  He might not always be the one with the big ideas, but when given a task, Nick will probably take a shot at getting it done.
+                            Nick was born to be a rock solid follower, but at the same time, an inspirational leader through his empathy and love.  He might not always be the one with the big ideas, but when given a task, Nick will give it his all to get it done.  
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
@@ -76,7 +76,7 @@ const About: React.FC = () => {
                     </Card.Body>
                     <ListGroup className="list-group-flush">
                         <ListGroupItem> <h6>About Josh: </h6>
-                            Josh lives in Renton, Washington.  He is looking for a nice girl that he can introduce his parents to.  Although not required, a girl with a sense of humor is prefered in order to keep up with Josh's quick wit and joyful outlook on life.  Josh is a man of confidence; he is more than willing to show off his lean body and stunning tattoos.  Who needs to buy a fan when you can just pop your shirt off when you get too hot?  That's just the way Josh lives his life.  Josh, "the-man-that-has-everything", is just missing one thing. . . a lucky lady that is enjoys life as much as he does. 
+                            Josh lives in Renton, Washington.  He is looking for a nice girl that he can introduce his parents to.  Although not required, a girl with a sense of humor is prefered in order to keep up with Josh's quick wit and joyful outlook on life.  Josh is a man of confidence; he is more than willing to show off his lean body and stunning tattoos.  Who needs to buy a fan when you can just pop your shirt off when you get too hot?  That's just the way Josh lives his life.  A lover of travel, the sun, and good times - any girl would be happy to have him in her life.  Josh is also an avid follower of the Church of Nick Quandt.  Josh, "the-man-that-has-everything", is just missing one thing. . . a lucky lady that is enjoys life as much as he does. 
                         </ListGroupItem>
                     </ListGroup>
                     {/* <Card.Body>
