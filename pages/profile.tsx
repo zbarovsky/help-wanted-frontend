@@ -30,16 +30,23 @@ const Profile: React.FC = () => {
     return (
         <div>
             <Container>
+                <Row className="header">
+                    <Col lg="3"></Col>
+                    
+                    <Col lg="6"> <h1>Welcome to your profile!</h1> </Col>
+                    
+                    <Col lg="3"></Col>
+                </Row>
+
                 <Row>
-                    <Col lg="4"></Col>
+                    <Col lg="3"></Col>
 
                     <Col lg="6"> 
-                        <h2>Welcome to your profile!</h2>
                         <div>
-                            <Card style={{ width: '18rem' }} className="m-auto">
-                                <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                            <Card style={{ width: '35vw' }} className="cards">
+                                <Card.Img variant="top" src={user.avatar} />
                                 <Card.Body>
-                                  <Card.Title><h3>{user.name}</h3></Card.Title>
+                                  <Card.Title><h3 className="name">{user.name}</h3></Card.Title>
                                   <Card.Text>
                                         <h5>About Me:</h5>
                                         {user.bio}
@@ -52,7 +59,7 @@ const Profile: React.FC = () => {
                         </div>
                     </Col> 
 
-                    <Col lg="4"></Col>
+                    <Col lg="3"></Col>
 
                 </Row>
             </Container>

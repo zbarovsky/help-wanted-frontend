@@ -9,91 +9,60 @@ import Link from 'next/link'
 
 
 const Login: React.FC = () => {
-  // console logs for testing
-  console.log("🏎 Login Component Rendered")
-  
-
-  let [email, setEmail] = useState("")
-  let [password, setPassword] = useState("")
-
-  let handleEmail = (e) => {
-      setEmail(e.target.value)
-  }
-
-  let handlePassword = (e) => {
-      setPassword(e.target.value)
-  }
-  
-  let handleSubmit = (e) => {
-      e.preventDefault();
-      // capture userData
-      const userData = {
-        email: email,
-        password: password
-      }
-    }
-      
-      // make a post request to our API to see check user Authentication
-  //     axios.post(`http://localhost:3001/users/login`, userData)
-  //     .then(res => {
-  //       // take res data and set to token
-  //       const { token } = res.data
-        
-  //       // save token to localStorage
-  //       localStorage.setItem('jwtToken', token)
-        
-  //       // set token for Auth Header
-  //       setAuthToken(token)
-        
-  //       // decode jwt token
-  //       const decoded = jwt_decode(token)
-        
-  //       // set current user 
-  //       props.nowCurrentUser(decoded)
-  //       // console.log("props.nowCurrentUser in login.tsx", props.nowCurrentUser(decoded))
-  //     })
-  //         .catch(err => console.log(err))
-  // }
-
-  // if (props.user) return <Redirect to="/profile" currentUser={props.user} />
-
-
-
-  
   return (
       <div className="login">
         <Container>
           <Row>
+            <Col lg="4"> </Col>
+
+
+            <Col lg="4">
+              <h3>Logo</h3>
+            </Col>
+
+            <Col lg="4"></Col>
+          </Row>
+
+          <Row>
+            <Col lg="4"></Col>
+
+
             <Col>
-              <div className="card">
-                <h2 className="py-2">Login</h2>
-                  <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" required />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
-                  </div>
-                  <button type="submit" onClick={handleSubmit} className="btn btn-primary float-right">
-                    <Link href="viewcards">
-                      <a>
-                        Submit
-                      </a>
-                    </Link>
-                    </button>
-              </div>
+              <h5>“Music produces a kind of pleasure which human nature cannot do without.” <br />
+              ― Confucius</h5>
+              <p>Music inspires people, Music moves people, Music informs people</p>
+              <p> Now is the time if you have been wanting to learn how to play a new instrument and Help Wanted is here for you!</p>
+              <p> Pick from hundreds of expert instructors through our affordable subscription model and learn today!</p>
             </Col>
           </Row>
 
           <Row>
-            <Col lg="1"></Col>
+            <Col md="2"></Col>
 
-            <Col lg="10">
+            <Col md="4">
+            <div> <a href="/login">
+                <h5>Login</h5>
+                </a>
+              </div>
+            </Col>
+
+            <Col md="2"></Col>
+
+            <Col md="4">
+              <div> <a href="/signup">
+                <h5>Register</h5>
+                </a>
+              </div>
+            </Col>
+          </Row>
+
+
+          <Row>
+
+            <Col>
               <LandingCarousel />
             </Col>
 
-            <Col lg="1"></Col>
           </Row>
         </Container>
       </div>
