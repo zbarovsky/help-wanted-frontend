@@ -7,6 +7,7 @@ const About: React.FC = () => {
     return (
         <div className="about">
             <Navbar />
+            <h1>About the Devs</h1>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://ca.slack-edge.com/T0351JZQ0-UV0CS3TQF-6394ecdb9322-512" />
                 <Card.Body>

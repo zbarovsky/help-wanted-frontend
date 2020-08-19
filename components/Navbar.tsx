@@ -18,6 +18,9 @@ const Navbar: React.FC = () => {
                         <Nav.Link href="viewcards">View Instructors</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
+                        <Nav.Link href="about">About</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item as="li">
                         <Nav.Link href="/">Logout</Nav.Link>
                     </Nav.Item>
                 </Nav>
