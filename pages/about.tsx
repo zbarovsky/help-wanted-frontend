@@ -9,7 +9,7 @@ const About: React.FC = () => {
             <Navbar />
             <h1 className="aboutHeader">About the Devs</h1>
             <div className="about">
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '30rem' }}>
                     <Card.Img variant="top" src="https://ca.slack-edge.com/T0351JZQ0-UV0CS3TQF-6394ecdb9322-512" />
                     <Card.Body>
                         <Card.Title>Zack Barovsky</Card.Title>
@@ -28,7 +28,7 @@ const About: React.FC = () => {
                 </Card> 
 
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '30rem' }}>
                     <Card.Img variant="top" src="https://ca.slack-edge.com/T0351JZQ0-U01415U60F3-6e0c540a4b33-512" />
                     <Card.Body>
                         <Card.Title>Salman (Sal) Malik</Card.Title>
@@ -47,7 +47,7 @@ const About: React.FC = () => {
                 </Card> 
             </div>
             <div className="about">
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '30rem' }}>
                     <Card.Img variant="top" src="https://ca.slack-edge.com/T0351JZQ0-U0141JELV4Y-710a221b9c63-512" />
                     <Card.Body>
                         <Card.Title>Nick Hvattum</Card.Title>
@@ -66,7 +66,7 @@ const About: React.FC = () => {
                 </Card> 
 
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '30rem' }}>
                     <Card.Img variant="top" src="https://ca.slack-edge.com/T0351JZQ0-U011SC6GRMK-b7744c409e1e-512" />
                     <Card.Body>
                         <Card.Title>Josh Danao</Card.Title>

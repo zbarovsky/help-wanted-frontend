@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import CreateCustomerForm from '../components/CreateCustomerForm'
 import Link from 'next/link'
+import YellowNav from '../components/yellownav'
 
 
 const Signup: React.FC = () => {
@@ -55,36 +56,39 @@ const Signup: React.FC = () => {
     // if (redirect) return <Redirect to='/login' />
 
     return (
-        <div className="row mt-4">
-        <div className="col-md-7 offset-md-3">
-          <div className="card card-body">
-            <h2 className="py-2">Signup</h2>
-            {/* <form method="POST" onSubmit={handleSubmit} action="/"> */}
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" value={name} onChange={handleName} className="form-control" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password2">Confirm Password</label>
-                <input type="password" name="password2" value={password2} onChange={handlePassword2} className="form-control" />
-              </div>
-              <button onClick={handleSubmit} className="btn btn-primary float-right">
-                <Link href="/">
-                  <a >Submit</a>
-                </Link>
-              </button>
-            {/* </form> */}
+      <div>
+        <YellowNav />
+          <div className="row mt-4">
+          <div className="col-md-7 offset-md-3">
+            <div className="card card-body">
+              <h2 className="py-2">Signup</h2>
+              {/* <form method="POST" onSubmit={handleSubmit} action="/"> */}
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" name="name" value={name} onChange={handleName} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password2">Confirm Password</label>
+                  <input type="password" name="password2" value={password2} onChange={handlePassword2} className="form-control" />
+                </div>
+                <button onClick={handleSubmit} className="btn btn-primary float-right">
+                  <Link href="/">
+                    <a >Submit</a>
+                  </Link>
+                </button>
+              {/* </form> */}
+            </div>
           </div>
+          <CreateCustomerForm email={email} />
         </div>
-        <CreateCustomerForm email={email} />
       </div>
     )
 }
