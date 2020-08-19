@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
+import CreateCustomerForm from '../components/CreateCustomerForm'
 import Link from 'next/link'
+
 
 const Signup: React.FC = () => {
     let [name, setName] = useState('')
@@ -81,6 +84,7 @@ const Signup: React.FC = () => {
             {/* </form> */}
           </div>
         </div>
+        <CreateCustomerForm email={email} />
       </div>
     )
 }
