@@ -12,7 +12,7 @@ const Signup: React.FC = () => {
     let [password, setPassword] = useState('')
     let [password2, setPassword2] = useState('')
     let [isTeacher, setIsTeacher] = useState('false')
-    let [avatar, setAvatar] = useState(null)
+    let [avatar, setAvatar] = useState('')
     let [bio, setBio] = useState('')
     let [instrumentsPlayed, setInstrumentsPlayed] = useState('')
 
@@ -106,9 +106,13 @@ const Signup: React.FC = () => {
                   <label htmlFor="password2">Confirm Password</label>
                   <input type="password" name="password2" value={password2} onChange={handlePassword2} className="form-control" />
                 </div>
-                <div className="form-group">
+                <div className="form-group radio">
                   <label htmlFor="isTeacher">This is a Teacher Profile</label>
                   <input type="radio" name="isTeacher" value="True" onChange={handleIsTeacher} className="form-control" />
+                </div>
+                <div className="form-group radio">
+                  <label htmlFor="isTeacher">This is a Student Profile</label>
+                  <input type="radio" name="isTeacher" value="false" onChange={handleIsTeacher} className="form-control" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="bio">Bio</label>

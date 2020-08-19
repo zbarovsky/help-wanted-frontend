@@ -96,3 +96,7 @@ a {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
+
+.radio {
+  width: 15%;
+}
