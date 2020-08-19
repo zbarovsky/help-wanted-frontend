@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Login from '../components/home'
 import YellowNav from '../components/yellownav'
-
+import Button from 'react-bootstrap/Button'
 
 
 export default function LandingPage(props) {
@@ -55,7 +55,21 @@ export default function LandingPage(props) {
               />
           </Head>
           <YellowNav />
+          <div className="introText">
+            <h4 className="hTags"> "Music produces a kind of pleasure which human nature cannot do without." ― Confucius</h4>
+            <h5 className="hTags"> Welcome to Help Wanted! Now is the time to expand your music knowledge and learn from the best!</h5>
+            <h5 className="hTags"> Join hundreds of amazing instructors through our easy subscription program </h5>
+          </div>  
+          <div className="homeBtns">
+            <Button variant="primary">
+              <a href="/login">Login</a>
+            </Button>
+            <Button variant="primary">
+              <a href="/signup">Signup</a>
+            </Button>
+          </div>
         <div className="row mt-4">
+          
           <Login />
         </div>
       </div>  
