@@ -16,6 +16,17 @@ a {
   box-sizing: border-box;
 }
 
+
+.header {
+  margin: 30px 0 30px 0;
+  font-weight: bold;
+}
+
+.name {
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+
 /* ----------- NavBar ------------ */
 
 .navDiv {

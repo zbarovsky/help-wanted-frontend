@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 
 
 function MyApp({ Component, pageProps }) {

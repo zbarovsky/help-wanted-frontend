@@ -5,8 +5,10 @@ import jwt_decode from 'jwt-decode'
 import { Redirect } from 'react-router-dom'
 import setAuthToken from '../utils/setAuthToken'
 import Head from 'next/head'
+import CreateCustomerForm from '../components/CreateCustomerForm'
 import Link from 'next/link'
 import Login from '../components/home'
+
 
 
 export default function LandingPage(props) {

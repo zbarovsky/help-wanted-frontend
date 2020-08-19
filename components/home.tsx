@@ -37,6 +37,20 @@ const Login: React.FC = () => {
       <div className="login">
         <Container>
           <Row>
+            <Col lg="4"> </Col>
+
+
+            <Col lg="4">
+              <h3>Logo</h3>
+            </Col>
+
+            <Col lg="4"></Col>
+          </Row>
+
+          <Row>
+            <Col lg="4"></Col>
+
+
             <Col>
               <div className="card">
                 <h2 className="py-2">Login</h2>
@@ -72,14 +86,13 @@ const Login: React.FC = () => {
             </Col>
           </Row>
 
-          <Row>
-            <Col lg="1"></Col>
 
-            <Col lg="10">
+          <Row>
+
+            <Col>
               <LandingCarousel />
             </Col>
 
-            <Col lg="1"></Col>
           </Row>
         </Container>
       </div>
