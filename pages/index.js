@@ -1,13 +1,8 @@
 
 import React, { useState } from 'react'
-import axios from 'axios'
-import jwt_decode from 'jwt-decode'
-import { Redirect } from 'react-router-dom'
-import setAuthToken from '../utils/setAuthToken'
 import Head from 'next/head'
-import CreateCustomerForm from '../components/CreateCustomerForm'
-import Link from 'next/link'
 import Login from '../components/home'
+import YellowNav from '../components/yellownav'
 
 
 
@@ -38,8 +33,8 @@ export default function LandingPage(props) {
 
 
     return (
-        <div className="row mt-4">
-          <Head>
+      <div>
+        <Head>
             <title>Help Wanted</title>
             <link rel="icon" href="/favicon.ico" />
             
@@ -59,8 +54,10 @@ export default function LandingPage(props) {
                   crossOrigin ="anonymous"
               />
           </Head>
+          <YellowNav />
+        <div className="row mt-4">
           <Login />
-
         </div>
+      </div>  
     )
 }
